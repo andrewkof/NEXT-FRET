@@ -10,13 +10,6 @@ Ensure you have the required dependencies installed. You can install them using:
 pip install -r requirements.txt
 ```
 
-Dependencies include:
-- `autograd`
-- `numpy`
-- `scipy`
-- `matplotlib`
-- `pandas`
-- `scikit-learn`
 
 ## Usage Example
 
