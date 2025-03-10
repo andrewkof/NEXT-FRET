@@ -12,16 +12,9 @@ pip install -r requirements.txt
 
 
 ## Usage Example
+A complete usage example is the main.py file. 
 
-### 1. Import Required Modules
-
-```python
-import numpy as np
-from tvGMM2 import tvGMM
-from EM_K_tools import load_synthetic_exeperiment
-```
-
-### 2. Generate Synthetic Data
+### 2. Load Synthetic Data
 
 ```python
 # Load synthetic experiment data
@@ -39,7 +32,7 @@ initial_stds = np.array([[0.05], [0.05], [0.05], [0.05]])
 dimt = 5  # Dimensionality of basis time vector
 K = 4  # Number of states (mixture components)
 method = 'Splines'  # Basis time vector method
-path_to_save = 'TestBIC/'  # Directory for saving results
+path_to_save = 'results/'  # Directory for saving results
 ```
 
 ### 4. Define Prior Knowledge (Optional)
