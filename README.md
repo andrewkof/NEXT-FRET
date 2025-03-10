@@ -14,14 +14,14 @@ pip install -r requirements.txt
 ## Usage Example
 A complete usage example is the main.py file. 
 
-### 2. Load Synthetic Data
+### 1. Load Synthetic Data
 
 ```python
-# Load synthetic experiment data
+# Load synthetic experiment data from paper
 W_true, MeansStds_true, K_true, e_data, t_data, z_data, p, samples, c = load_synthetic_exeperiment()
 ```
 
-### 3. Initialize Model Parameters
+### 2. Initialize Model Parameters
 
 ```python
 # Define initial means and standard deviations
@@ -35,7 +35,7 @@ method = 'Splines'  # Basis time vector method
 path_to_save = 'results/'  # Directory for saving results
 ```
 
-### 4. Define Prior Knowledge (Optional)
+### 3. Define Prior Knowledge (Optional)
 
 ```python
 # Set the strength of prior knowledge
@@ -55,7 +55,7 @@ prior_std1 = [2, 0.02, samples**(power)]
 prior_knowledge = [[prior_mu1], [prior_std1]]
 ```
 
-### 5. Initialize and Run the Model
+### 4. Initialize and Run the Model
 
 ```python
 # Initialize the tvGMM model
@@ -71,7 +71,7 @@ model.enable_prior(prior_knowledge)
 W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path=path_to_save)
 ```
 
-### 6. Output Results
+### 5. Output Results
 
 After running the EM algorithm, the estimated parameters (weights `W_est`, means `means_est`, and standard deviations `stds_est`) will be stored in `path_to_save` for further analysis.
 
