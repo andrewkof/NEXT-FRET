@@ -85,13 +85,13 @@ After running the EM algorithm, the estimated parameters (weights `W_est`, means
 ## Directory Structure
 
 ```
-├── tvGMM2.py                 # tvGMM implementation
-├── EM_K_tools.py             # Helper functions for data processing
-├── main2.py                  # Example script to run the model
-├── requirements.txt           # Required dependencies
-├── TestBIC/                   # Output directory for results
-│   ├── ParametricEstimations/  # Estimated parameters
-│   ├── Norms/                  # Convergence metrics
+├── Analysis.py                 # tvGMM implementation
+├── EM_K_tools.py               # Helper functions
+├── main.py                     # Example script to run the model
+├── requirements.txt            # Required dependencies
+├── results/                    # Output directory for results
+│   ├── ParametricEstimations/  # Estimated parameters (means, stds and matrix W)
+│   ├── Norms/                  # Convergence metric
 │   ├── GroundTruth/            # Ground truth data visualization
 ```
 
