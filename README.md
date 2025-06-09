@@ -1,97 +1,77 @@
 # Time-Varying Gaussian Mixture Model (tvGMM)
 
-This repository provides an implementation of a Time-Varying Gaussian Mixture Model (tvGMM) for analyzing single-molecule FRET (smFRET) data. The model is built using Expectation-Maximization (EM) for parameter estimation and supports prior knowledge integration.
+tvGMM is a Python implementation of a time-varying Gaussian mixture model for analysing single-molecule FRET (smFRET) trajectories. It relies on an Expectation–Maximisation (EM) procedure and optionally incorporates prior knowledge about expected states.
 
-## Requirements
+## Features
 
-Ensure you have the required dependencies installed. You can install them using:
+- Synthetic and real data support
+- EM algorithm with optional priors
+- Utility functions to generate ground truth data and save results
+- Built-in visualisation of estimated parameters
+
+## Installation
+
+Clone this repository and install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+## Running the examples
 
-## Usage Example
-A complete usage example is the main.py file. 
+Two example scripts are provided. Results are written to the `results/` directory.
 
-### 1. Load Synthetic Data
+### Synthetic data
 
-```python
-# Load synthetic experiment data from paper
-W_true, MeansStds_true, K_true, e_data, t_data, z_data, p, samples, c = load_synthetic_exeperiment()
+```bash
+python run_synthetic_example.py
 ```
 
-### 2. Initialize Model Parameters
+This script generates a synthetic experiment, runs the EM algorithm and stores the plots and estimated parameters.
 
-```python
-# Define initial means and standard deviations
-initial_means = np.array([[0.1], [0.3], [0.5], [0.7]])
-initial_stds = np.array([[0.05], [0.05], [0.05], [0.05]])
+### Real data
 
-# Define model settings
-dimt = 5  # Dimensionality of basis time vector
-K = 4  # Number of states (mixture components)
-method = 'Splines'  # Basis time vector method
-path_to_save = 'results/'  # Directory for saving results
+```bash
+python run_real_example.py
 ```
 
-### 3. Define Prior Knowledge (Optional)
+`run_real_example.py` expects a CSV file containing `Time` and `FRET` columns (default `MB.csv`). Provide your own file or adjust `DATA_FILE` inside the script.
+
+## Using the model in your code
 
 ```python
-# Set the strength of prior knowledge
-strength = 'Very Strong'
-if strength == 'Very Strong':
-    power = 1.5
-elif strength == 'Strong':
-    power = 1
-elif strength == 'Weak':
-    power = 0.5
-elif strength == 'Very Weak':
-    power = 0.0
+from Analysis import tvGMM
+from EM_K_tools import load_synthetic_exeperiment
 
-# Define priors for means and standard deviations
-prior_mu1 = [2, 0.25, samples**(power)]
-prior_std1 = [2, 0.02, samples**(power)]
-prior_knowledge = [[prior_mu1], [prior_std1]]
-```
+# Load example data
+W_true, MeansStds_true, K_true, e_data, t_data, *_ = load_synthetic_exeperiment()
 
-### 4. Initialize and Run the Model
+# Initial guesses
+init_means = [0.10, 0.30, 0.50, 0.70]
+init_stds = [0.05] * 4
 
-```python
-# Initialize the tvGMM model
-model = tvGMM(e_data, t_data, K, dimt, method, initial_means, initial_stds)
-
-# Set up synthetic data parameters
+# Build and run the model
+model = tvGMM(e_data, t_data, K_true, dimt=5, method='Splines',
+              initial_means=init_means, initial_stds=init_stds)
 model.setup_synthetic(MeansStds_true, K_true)
-
-# Enable prior knowledge (optional)
-model.enable_prior(prior_knowledge)
-
-# Run the Expectation-Maximization (EM) algorithm
-W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path=path_to_save)
+W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path='results/')
 ```
 
-### 5. Output Results
-
-After running the EM algorithm, the estimated parameters (weights `W_est`, means `means_est`, and standard deviations `stds_est`) will be stored in `path_to_save` for further analysis.
-
-## Directory Structure
+## Repository layout
 
 ```
-├── Analysis.py                 # tvGMM implementation
-├── EM_K_tools.py               # Helper functions
-├── main.py                     # Example script to run the model
-├── requirements.txt            # Required dependencies
-├── results/                    # Output directory for results
-│   ├── ParametricEstimations/  # Estimated parameters (means, stds and matrix W)
-│   ├── Norms/                  # Convergence metric
-│   ├── GroundTruth/            # Ground truth data visualization
+├── Analysis.py               # tvGMM implementation
+├── EM_K_tools.py             # Helper functions
+├── run_real_example.py       # Example using real data
+├── run_synthetic_example.py  # Example using synthetic data
+├── requirements.txt          # Required Python packages
+└── results/                  # Output files will appear here
 ```
-
-## References
-
-If you use this model in your research, please cite the relevant literature on time-varying Gaussian mixture models for smFRET data analysis.
 
 ## License
 
-This project is open-source and licensed under the MIT License.
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+## References
+
+If you use tvGMM in academic work, please cite relevant papers on time-varying GMMs for smFRET analysis.
