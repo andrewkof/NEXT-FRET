@@ -1,10 +1,11 @@
 <!-- README badges -->
-![Python](https://img.shields.io/badge/python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=matplotlib&logoColor=black)
-![SciPy](https://img.shields.io/badge/SciPy-0C55A5?style=for-the-badge&logo=scipy&logoColor=white)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?logo=matplotlib&logoColor=black)
+![SciPy](https://img.shields.io/badge/SciPy-0C55A5?logo=scipy&logoColor=white)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+
 
 
 # Time-Varying Gaussian Mixture Model (tvGMM)
