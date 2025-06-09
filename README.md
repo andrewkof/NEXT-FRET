@@ -1,3 +1,10 @@
+<!-- README badges -->
+![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.02084-b31b1b)](https://arxiv.org/abs/2506.02084)
+
 # Time-Varying Gaussian Mixture Model (tvGMM)
 
 tvGMM is a Python implementation of a time-varying Gaussian mixture model for analysing single-molecule FRET (smFRET) trajectories. It relies on an Expectation–Maximisation (EM) procedure and optionally incorporates prior knowledge about expected states.
