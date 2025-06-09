@@ -12,13 +12,6 @@
 
 tvGMM is a Python implementation of a time-varying Gaussian mixture model for analysing single-molecule FRET (smFRET) trajectories. It relies on an Expectation–Maximisation (EM) procedure and optionally incorporates prior knowledge about expected states.
 
-## Features
-
-- Synthetic and real data support
-- EM algorithm with optional priors
-- Utility functions to generate ground truth data and save results
-- Built-in visualisation of estimated parameters
-
 ## Installation
 
 Clone this repository and install the dependencies:
@@ -27,7 +20,7 @@ Clone this repository and install the dependencies:
 pip install -r requirements.txt
 ```
 
-## Running the examples
+## Running examples
 
 Two example scripts are provided. Results are written to the `results/` directory.
 
