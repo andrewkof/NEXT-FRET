@@ -1,5 +1,5 @@
 <!-- README badges -->
-![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
