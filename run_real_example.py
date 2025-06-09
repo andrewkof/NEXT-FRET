@@ -6,7 +6,7 @@ from EM_K_tools import *
 # ───────────────────────────────────────────────────────────────────
 SEED                = 1
 RESULTS_DIR         = "./results/"
-DATA_FILE           = "MB.csv"
+DATA_FILE           = "data/MB.csv"
 
 # initial parameter guesses
 initial_means       = [0.10, 0.30, 0.50, 0.70]

@@ -45,7 +45,7 @@ This script generates a synthetic experiment, runs the EM algorithm and stores t
 python run_real_example.py
 ```
 
-`run_real_example.py` expects a CSV file containing `Time` and `FRET` columns (default `MB.csv`). Provide your own file or adjust `DATA_FILE` inside the script.
+`run_real_example.py` expects a CSV file containing `Time` and `FRET` columns (default `data/MB.csv`). Provide your own file or adjust `DATA_FILE` inside the script.
 
 ## Using the model in your code
 
@@ -75,6 +75,7 @@ W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path='results/')
 ├── run_real_example.py       # Example using real data
 ├── run_synthetic_example.py  # Example using synthetic data
 ├── requirements.txt          # Required Python packages
+├── data/                     # Place your CSV file here
 └── results/                  # Output files will appear here
 ```
 
