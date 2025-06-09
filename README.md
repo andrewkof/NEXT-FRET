@@ -1,9 +1,10 @@
 <!-- README badges -->
 ![Python](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
-[![arXiv](https://img.shields.io/badge/arXiv-2506.02084-b31b1b)](https://arxiv.org/abs/2506.02084)
 
 # Time-Varying Gaussian Mixture Model (tvGMM)
 
