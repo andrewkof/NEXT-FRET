@@ -34,7 +34,7 @@ Two example scripts are provided. Results are written to the `results/` director
 ### Synthetic data
 
 ```bash
-python run_synthetic_example.py
+python -m code.examples.run_synthetic_example
 ```
 
 This script generates a synthetic experiment, runs the EM algorithm and stores the plots and estimated parameters.
@@ -42,7 +42,7 @@ This script generates a synthetic experiment, runs the EM algorithm and stores t
 ### Real data
 
 ```bash
-python run_real_example.py
+python -m code.examples.run_real_example
 ```
 
 `run_real_example.py` expects a CSV file containing `Time` and `FRET` columns (default `data/MB.csv`). Provide your own file or adjust `DATA_FILE` inside the script.
@@ -50,8 +50,8 @@ python run_real_example.py
 ## Using the model in your code
 
 ```python
-from Analysis import tvGMM
-from EM_K_tools import load_synthetic_exeperiment
+from code.Analysis import tvGMM
+from code.EM_K_tools import load_synthetic_exeperiment
 
 # Load example data
 W_true, MeansStds_true, K_true, e_data, t_data, *_ = load_synthetic_exeperiment()
@@ -70,10 +70,12 @@ W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path='results/')
 ## Repository layout
 
 ```
-├── Analysis.py               # tvGMM implementation
-├── EM_K_tools.py             # Helper functions
-├── run_real_example.py       # Example using real data
-├── run_synthetic_example.py  # Example using synthetic data
+├── code/
+│   ├── Analysis.py               # tvGMM implementation
+│   ├── EM_K_tools.py             # Helper functions
+│   └── examples/
+│       ├── run_real_example.py       # Example using real data
+│       └── run_synthetic_example.py  # Example using synthetic data
 ├── requirements.txt          # Required Python packages
 ├── data/                     # Place your CSV file here
 └── results/                  # Output files will appear here

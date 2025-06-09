@@ -1,6 +1,6 @@
 from scipy.optimize import minimize
 import numpy as np
-from EM_K_tools import *
+from .EM_K_tools import *
 import autograd.numpy as np  # Use autograd's NumPy
 from autograd import grad
 from autograd import hessian
