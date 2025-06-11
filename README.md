@@ -27,18 +27,14 @@ Two example scripts are provided. Results are written to the `results/` director
 ### Synthetic data
 
 ```bash
-python -m code.examples.run_synthetic_example
+python -m code.real_examples.run_MBP
 ```
 
-This script generates a synthetic experiment, runs the EM algorithm and stores the plots and estimated parameters.
+This script runs one of the example datasets and stores the results in a `results_*` directory.  Other scripts in `code/real_examples` can be run in the same manner.
 
 ### Real data
 
-```bash
-python -m code.examples.run_real_example
-```
-
-`run_real_example.py` expects a CSV file containing `Time` and `FRET` columns (default `data/MB.csv`). Provide your own file or adjust `DATA_FILE` inside the script.
+The real examples expect the Excel workbook `data/folding_data.xlsx` with worksheets named after the different datasets.  Adjust the `DATA_FILE` variable inside each script if needed.
 
 ## Using the model in your code
 
@@ -66,11 +62,9 @@ W_est, means_est, stds_est = model.EM_algorithm(max_iters=300, path='results/')
 ├── code/
 │   ├── Analysis.py               # tvGMM implementation
 │   ├── EM_K_tools.py             # Helper functions
-│   └── examples/
-│       ├── run_real_example.py       # Example using real data
-│       └── run_synthetic_example.py  # Example using synthetic data
+│   └── real_examples/            # Example scripts using the model
 ├── requirements.txt          # Required Python packages
-├── data/                     # Place your CSV file here
+├── data/                     # `folding_data.xlsx` workbook
 └── results/                  # Output files will appear here
 ```
 
