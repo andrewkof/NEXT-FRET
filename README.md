@@ -30,7 +30,7 @@ python -m code.real_examples.run_MBP
 
 This script runs one of the example datasets and stores the results in a `results_*` directory.  Other scripts in `code/real_examples` can be run in the same manner.
 
-## folding data
+## Folding data
 
 The real examples expect the Excel workbook `data/folding_data.xlsx` with worksheets named after the different datasets.  Adjust the `DATA_FILE` variable inside each script if needed.
 
