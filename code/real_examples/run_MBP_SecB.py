@@ -1,5 +1,5 @@
-from Analysis import tvGMM
-from EM_K_tools import *
+from code.Analysis import tvGMM
+from code.EM_K_tools import *
 
 # ───────────────────────────────────────────────────────────────────
 # 1.  Basic settings
