@@ -8,7 +8,7 @@
 
 
 
-# Time-Varying Gaussian Mixture Model (tvGMM)
+# 📌 Time-Varying Gaussian Mixture Model (tvGMM)
 
 tvGMM is a Python implementation of the time-varying Gaussian Mixture Model, designed for the analysis of single-molecule FRET (smFRET) measurements. tvGMM dissects dynamic folding 
 behaviors and identifies transient intermediate states in smFRET experiments. Our framework utilizes the Expectation–Maximization (EM) algorithm to iteratively estimate tvGMM’s parameters. 
