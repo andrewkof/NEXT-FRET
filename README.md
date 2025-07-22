@@ -8,10 +8,10 @@
 
 
 
-# 📌 NEO-FRET: A Time-Varying Gaussian Mixture Model for smFRET Analysis
+# 📌 NEXT-FRET: A Time-Varying Gaussian Mixture Model for smFRET Analysis
 
-NEO-FRET is a Python package that implements a time-varying Gaussian Mixture Model, designed for the analysis of single-molecule FRET (smFRET) measurements. tvGMM dissects dynamic folding 
-behaviors and identifies transient intermediate states in smFRET experiments. NEO-FRET utilizes the Expectation–Maximization (EM) algorithm to iteratively estimate tvGMM’s parameters. 
+NEXT-FRET is a Python package that implements a time-varying Gaussian Mixture Model, designed for the analysis of single-molecule FRET (smFRET) measurements. tvGMM dissects dynamic folding 
+behaviors and identifies transient intermediate states in smFRET experiments. NEXT-FRET utilizes the Expectation–Maximization (EM) algorithm to iteratively estimate tvGMM’s parameters. 
 It also supports the incorporation of prior knowledge about the expected conformational states allowing for improved robustness and interpretability, particularly in low-sample or noisy 
 regimes.
 
