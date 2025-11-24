@@ -77,12 +77,18 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 If you use tvGMM in academic work, please cite the relevant paper on time-varying GMM for smFRET analysis:
 
+## References
+
+If you use tvGMM in academic work, please cite the relevant paper on time-varying GMM for smFRET analysis:
+
+```bibtex
 @article{preprint_2025_07_30_666321v1,
-  author       = {Chara Sarafoglou, Andreas Kofidis, Marijn de Boer, Mikis Mylonakis, Kostas Mavrakis, Giannis Zacharakis, Yannis Pantazis,  Giorgos Gouridis},
+  author       = {Chara Sarafoglou and Andreas Kofidis and Marijn de Boer and Mikis Mylonakis and Kostas Mavrakis and Giannis Zacharakis and Yannis Pantazis and Giorgos Gouridis},
   title        = {NEXT-FRET: A solution-based smFRET platform to resolve folding intermediates under native conditions},
   journal      = {bioRxiv},
   year         = {2025},
   doi          = {10.1101/2025.07.30.666321v1},
   url          = {https://www.biorxiv.org/content/10.1101/2025.07.30.666321v1},
 }
+
 
