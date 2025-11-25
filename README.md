@@ -77,10 +77,6 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 If you use tvGMM in academic work, please cite the relevant paper on time-varying GMM for smFRET analysis:
 
-## References
-
-If you use tvGMM in academic work, please cite the relevant paper on time-varying GMM for smFRET analysis:
-
 ```bibtex
 @article{preprint_2025_07_30_666321v1,
   author       = {Chara Sarafoglou and Andreas Kofidis and Marijn de Boer and Mikis Mylonakis and Kostas Mavrakis and Giannis Zacharakis and Yannis Pantazis and Giorgos Gouridis},
