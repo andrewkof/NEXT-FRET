@@ -4,6 +4,7 @@ import scipy.interpolate as si
 import pandas as pd
 import numpy as np
 import os
+from scipy.stats import norm
 # from numpy import linalg as LA
 # np.random.seed(1)
 
@@ -249,6 +250,9 @@ def generate_contamenated_data(Wk, GroundTruth, samples, t, dimt, T, Aproximatio
         z_data.extend(z_cont)
     return e_data, t_data, z_data, p
 
+def distr_func(x, m, std):
+    x , m, std = float(x), float(m), float(std)
+    return norm.pdf(x, m, std)
 
 def SaveContamenatedTruthParameters(path, t_data, e_data, z_data, c, W_true):
     """

@@ -112,7 +112,7 @@ class tvGMM:
         # Compute transition probabilities
         PzGivent = [[] for _ in range(K)]
         for i in range(len(self.e)):
-            t_hat = get_t(self.dimt, self.t[i], 2 * self.T, self.method)
+            t_hat = vector_t(self.dimt, self.t[i], 2 * self.T, self.method)
             W = Wk_1 @ t_hat
             W = [float(w) for w in W]
             h = sum(np.exp(-w) for w in W)
@@ -225,7 +225,7 @@ class tvGMM:
         w = np.vstack([np.zeros((1, self.dimt)), w[1:, :]])
 
         # Precompute t_hat, a matrix with shape (N, dimt)
-        t_hat = np.array([get_t(self.dimt, ti, 2*self.T, self.method).ravel() for ti in self.t])
+        t_hat = np.array([vector_t(self.dimt, ti, 2*self.T, self.method).ravel() for ti in self.t])
 
         # Compute matrix product X and its negation
         X = t_hat @ w.T
@@ -285,7 +285,7 @@ class tvGMM:
 
         Computes the responsibilities matrix p(z|ei,ti) for all states
         """
-        t_hat = [get_t(self.dimt, self.t[i], 2*self.T, self.method) for i in range(len(self.t))]                 # Matrix like, shape=(dimt,len(ei)). Contains t vectors for all ti.
+        t_hat = [vector_t(self.dimt, self.t[i], 2*self.T, self.method) for i in range(len(self.t))]                 # Matrix like, shape=(dimt,len(ei)). Contains t vectors for all ti.
         Wi = [self.Wk@t_hat[i] for i in range(len(self.t))]                                                      # Matrix like, shape=(K,len(ei)). Contains all matrix multiplications for all ti. 
 
         wi, terms, pi_denom = [], [], []
