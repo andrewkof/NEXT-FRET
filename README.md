@@ -78,13 +78,18 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 If you use tvGMM in academic work, please cite the relevant paper on time-varying GMM for smFRET analysis:
 
 ```bibtex
-@article{preprint_2025_07_30_666321v1,
-  author       = {Chara Sarafoglou and Andreas Kofidis and Marijn de Boer and Mikis Mylonakis and Kostas Mavrakis and Giannis Zacharakis and Yannis Pantazis and Giorgos Gouridis},
-  title        = {NEXT-FRET: A solution-based smFRET platform to resolve folding intermediates under native conditions},
-  journal      = {bioRxiv},
-  year         = {2025},
-  doi          = {10.1101/2025.07.30.666321v1},
-  url          = {https://www.biorxiv.org/content/10.1101/2025.07.30.666321v1},
-}
+@article{
+doi:10.1073/pnas.2529979123,
+author = {Chara Sarafoglou  and Andreas Kofidis  and Marijn de Boer  and Mikis Mylonakis  and Kostas Mavrakis  and Giannis Zacharakis  and Yannis Pantazis  and Giorgos Gouridis },
+title = {NEXT-FRET maps nonequilibrium rerouting of <i>Escherichia coli</i> maltose-binding protein folding by its signal peptide and chaperones},
+journal = {Proceedings of the National Academy of Sciences},
+volume = {123},
+number = {20},
+pages = {e2529979123},
+year = {2026},
+doi = {10.1073/pnas.2529979123},
+URL = {https://www.pnas.org/doi/abs/10.1073/pnas.2529979123},
+eprint = {https://www.pnas.org/doi/pdf/10.1073/pnas.2529979123}}
+
 
 
