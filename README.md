@@ -8,7 +8,7 @@
 
 
 
-# 📌 NEXT-FRET: A Time-Varying Gaussian Mixture Model for smFRET Analysis
+# 📌 NEXT-FRET maps nonequilibrium rerouting of Escherichia coli maltose-binding protein folding by its signal peptide and chaperones
 
 NEXT-FRET is a Python package that implements a time-varying Gaussian Mixture Model, designed for the analysis of single-molecule FRET (smFRET) measurements. tvGMM dissects dynamic folding 
 behaviors and identifies transient intermediate states in smFRET experiments. NEXT-FRET utilizes the Expectation–Maximization (EM) algorithm to iteratively estimate tvGMM’s parameters. 
